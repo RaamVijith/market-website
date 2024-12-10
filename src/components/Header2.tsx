@@ -22,7 +22,7 @@ const Header2: React.FC = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-              ALL CATEGORIES.
+              ALL CATEGORIES
             </button>
             {/* Dropdown */}
             <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black shadow-md w-[18vw]">
