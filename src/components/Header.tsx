@@ -1,16 +1,20 @@
 import { useState } from "react";
+import { BiUser } from "react-icons/bi";
+import { GrLocation } from "react-icons/gr";
+import { LuShoppingBag } from "react-icons/lu";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-      <div className="bg-[#2557AA] text-white w-[100vw] flex flex-row items-center justify-between px-7 py-10">
-        {/* Logo */}
-        <div className="flex items-center gap-4 space-x-2">
-          <div className="bg-yellow-400 rounded-full w-12 h-12 flex justify-center items-center">
+    <>
+      <div className="bg-[#2557AA] text-white border-b border-gray-500 w-[100vw] flex flex-row items-center justify-between px-7 py-2">
+        <div className="flex flex-row gap-4 items-center text-lg">
+          <button className="flex flex-row gap-1 items-center space-x-1 hover:text-yellow-400 ">
+            English
             <svg
-              className="w-10 h-10 text-blue-600"
               xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -19,14 +23,56 @@ const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-4 8m4-8l-2.4-6M1 1h4m0 0L3.4 7"
+                d="M19 9l-7 7-7-7"
               />
             </svg>
-          </div>
-          <div>
-            <h1 className="font-bold text-3xl">MARKET</h1>
-            <p className="text-base font-semibold">Shop all you want</p>
-          </div>
+          </button>
+          | 
+          <button className="flex flex-row gap-1 items-center space-x-1 hover:text-yellow-400 ">
+            USD
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex flex-row gap-4 items-center text-lg">
+          <button className="flex flex-row gap-1 items-center space-x-1 hover:text-yellow-400 pr-5">
+          <GrLocation/>
+
+            Store Location
+            
+          </button>
+
+          <button className="flex flex-row gap-1 items-center space-x-1 hover:text-yellow-400">
+          <BiUser/>
+
+            Login
+            
+          </button>
+          | 
+          <button className="flex flex-row gap-1 items-center space-x-1 hover:text-yellow-400 ">
+            Register
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-[#2557AA] text-white w-[100vw] flex flex-row items-center justify-between px-7 py-10">
+        {/* Logo */}
+        <div className="flex items-center gap-4 space-x-2 ">
+            <img className="h-14" src="https://magento2.magentech.com/themes/sm_marketnew/pub/media/logo/stores/63/logo14_1.png"/>
+         
         </div>
 
         {/* Search Bar */}
@@ -98,30 +144,21 @@ const Header = () => {
         </div>
 
         {/* Cart */}
-        <div className="flex items-center">
-          <button className="bg-blue-500 pr-4  h-12 rounded-md flex items-center space-x-2">
-            <div className="bg-blue-800 h-full py-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-4 8m4-8l-2.4-6M1 1h4m0 0L3.4 7"
-              />
-            </svg>
+        <div className="flex items-center shadow-lg rounded-md">
+          <button className="bg-[#3174E3] pr-4  h-12 flex items-center space-x-2">
+            <div className="bg-[#2C68CC] flex items-center px-5 h-full py-2">
+             
+              <LuShoppingBag className="text-3xl"/>
             </div>
-            
-            <span>Shopping Cart</span>
-            <span className="ml-1">(0 items - $0.00)</span>
+            <div className="flex flex-col py-2 px-3">
+            <span className="font-semibold">SHOPING CART</span>
+            <span className="ml-1">0 items - $0.00</span>
+            </div>
+           
           </button>
         </div>
       </div>
+    </>
   );
 };
 

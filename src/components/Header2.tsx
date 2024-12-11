@@ -2,9 +2,9 @@ import React from "react";
 
 const Header2: React.FC = () => {
   return (
-      <div className="px-10 bg-[#2557AA] text-white w-[100vw]">
+      <div className="px-10 bg-[#2557AA] text-white w-[100vw] z-20">
         {/* Top Navigation */}
-        <nav className="flex justify-start items-center pt-4 whitespace-nowrap">
+        <nav className="flex justify-start items-center pt-4 whitespace-nowrap ">
           {/* Left Side - All Categories */}
           <div className="relative group">
             <button className="flex items-center bg-yellow-400 text-gray-800 font-bold text-lg px-5 gap-2 mr-20 py-3 w-[18vw] rounded-sm whitespace-nowrap">
@@ -25,8 +25,26 @@ const Header2: React.FC = () => {
               ALL CATEGORIES
             </button>
             {/* Dropdown */}
-            <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black shadow-md w-[18vw]">
-              <ul className="py-2 ">
+            <div className="absolute z-10 left-0 top-full hidden group-hover:block bg-white text-black shadow-md w-[18vw]">
+              <ul className="py-2 text-gray-500 text-lg ">
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer ">
+                  Electronics
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  Fashion
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  Home & Kitchen
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer ">
+                  Electronics
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  Fashion
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  Home & Kitchen
+                </li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer ">
                   Electronics
                 </li>
@@ -43,7 +61,7 @@ const Header2: React.FC = () => {
           {/* Center - Navbar Links */}
           <div className="flex items-center space-x-6 gap-8 text-xl font-semibold">
             {/* Home Dropdown */}
-            <div className="relative group">
+            <div className="relative group z-10">
               <button className="flex items-center space-x-1 hover:text-yellow-400 ">
                 HOME
                 <svg
@@ -105,7 +123,7 @@ const Header2: React.FC = () => {
             </div>
 
             {/* Features Dropdown */}
-            <div className="relative group">
+            <div className="relative group z-10">
               <button className="flex items-center space-x-1 hover:text-yellow-400">
                 FEATURES
                 <svg

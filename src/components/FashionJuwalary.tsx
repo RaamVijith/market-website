@@ -17,8 +17,7 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    image:
-      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/a/samsung_galaxy_a7_pro.jpg",
+    image:"https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/-/s-6_1.jpg",
     title: "Google Pixel Android 8.1 OPM",
     price: 95.0,
     rating: 5,
@@ -26,7 +25,7 @@ const products: Product[] = [
   {
     id: 2,
     image:
-      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/i/p/ipad_mini_4g_wifi_cellular_64gb_1.jpg",
+      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/-/s-6.jpg",
     title: "iPhone 7 Plus 64GB Silver",
     price: 88.0,
     rating: 3,
@@ -34,7 +33,7 @@ const products: Product[] = [
   {
     id: 3,
     image:
-      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/i/p/iphone_7_plus_64gb_silver_1.jpg",
+      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/-/s-4_1.jpg",
     title: "Samsung Galaxy A7 Pro",
     price: 99.0,
     rating: 5,
@@ -42,14 +41,14 @@ const products: Product[] = [
   {
     id: 4,
     image:
-      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/a/samsung_galaxy_s8_plus_gray_1_2.jpg",
+      "https://magento2.magentech.com/themes/sm_marketnew/pub/media/catalog/product/cache/2d44a1f17456aeae0d58475a77739749/s/-/s-4.jpg",
     title: "Samsung Galaxy J7 Prime 64GB",
     price: 250.0,
     rating: 4,
   },
 ];
 
-const BestSmartphone: React.FC = () => {
+const FashionJewelry: React.FC = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -80,11 +79,14 @@ const BestSmartphone: React.FC = () => {
 
   return (
     <div className="w-full  bg-white mt-8 shadow-md">
-      
       <div className="flex flex-row w-full">
-        <div className="hidden xl:flex bg-[#3199E2] w-[22vw] flex-col gap-[30%] justify-center items-center text-center">
-          <div className="text-white text-4xl font-semibold">The Best of Smartphone</div>
-          <div className="cursor-pointer bg-white py-4 px-10 text-lg whitespace-nowrap font-bold text-gray-700">VIEW ALL</div>
+        <div className="hidden xl:flex bg-[#FD7B7B] w-[22vw] flex-col gap-[30%] justify-center items-center text-center">
+          <div className="text-white text-4xl font-semibold">
+            Fashion <br/> & <br/>Jewelry
+          </div>
+          <div className="cursor-pointer shadow-md bg-white py-4 px-10 text-lg whitespace-nowrap font-bold text-gray-700">
+            VIEW ALL
+          </div>
         </div>
         <div className="w-full xl:max-w-[78vw] overflow-hidden">
           <Slider {...settings}>
@@ -140,4 +142,4 @@ const BestSmartphone: React.FC = () => {
   );
 };
 
-export default BestSmartphone;
+export default FashionJewelry;
