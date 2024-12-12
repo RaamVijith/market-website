@@ -152,7 +152,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col py-2 px-3">
             <span className="font-semibold">SHOPING CART</span>
-            <span className="ml-1">0 items - $0.00</span>
+            <span className="ml-1">0 items - $0.000</span>
             </div>
            
           </button>
